@@ -23,7 +23,7 @@ final class PlanStore {
         }
     }
 
-    static var defaultFileURL: URL {
+    nonisolated static var defaultFileURL: URL {
         let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
         return support.appendingPathComponent("FinancialPlanner", isDirectory: true)
             .appendingPathComponent("plan.json")
